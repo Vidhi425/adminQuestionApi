@@ -52,6 +52,7 @@ app.post("/newQuestion", async (req, res) => {
     const { question, answer, type } = req.body;
     const newQuestion = new Question({ question, answer, type });
     await newQuestion.save();
+    //console.log(newQuestion)
     res.redirect("/questions");
   } catch (error) {
     console.error(error);
