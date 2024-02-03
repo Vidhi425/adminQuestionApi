@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+</head>
+<body>
+    <h1>Questions</h1>
+    <% for(let Question of allQuestions) {%>
+<div>
+    <p><%=Question.question %></p>
+   
+</div>
+<div>
+    <p><%=Question.type %></p>
+</div>
+<div>
+    <p><%=Question.answer %></p>
+</div>
+        
+
+<a href="/questions/<%= Question._id %>/edit">Edit</a>
+
+
+
+        <%}%>
+        <h4>
+
+            <a href="/newQuestion">CREATE NEW QUESTION</a>
+           
+           
+        </h4>
+      
+
+</body>
+</html>

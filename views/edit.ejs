@@ -1,0 +1,24 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Question</title>
+</head>
+<body>
+    <h3>Edit Question</h3>
+    <form action="/questions/<%= question._id %>/edit" method="POST">
+        <input name="question" placeholder="Enter a title" type="text" value="<%= question.question %>"> <br>
+        <input name="answer" placeholder="Enter an answer" type="text" value="<%= question.answer %>"> <br>
+        <input name="type" placeholder="Enter a type" type="text" value="<%= question.type %>"> <br>
+        <button type="submit">Save </button>
+       
+    </form>
+
+  
+    <form action="/questions/<%= question._id %>?_method=DELETE" method="POST">
+        <button>DELETE</button>
+    </form>
+</body>
+</html>
