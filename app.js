@@ -91,7 +91,7 @@ app.delete("/questions/:id", async (req, res) => {
         await Question.findByIdAndDelete(id);  
     res.redirect("/questions");
   } catch (error) { 
-    console.error("Error deleting question:", error);
+    console.error(error);
     res.status(500).send("Error deleting question");
   }
 });
